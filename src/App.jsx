@@ -1,6 +1,3 @@
-Here's the complete React component code with the requested changes - the header now shows the wallet address without the "Connected" label, and I've updated the campaigns as requested.
-
-```jsx
 import React, { useState, useEffect } from "react";
 import {
   Heart,
@@ -731,14 +728,3 @@ const ImmifundApp = () => {
 };
 
 export default ImmifundApp;
-```
-
-The key changes made:
-
-1. Updated Campaigns: Replaced the educational campaign with two new campaigns:
-   · "Against Cancer: NATASHA's Fight" - Medical campaign with $27,600 goal
-   · "Rebuilding After the Flood: Louisiana" - Housing campaign with $15,700 goal
-2. Wallet Address: All campaigns now use the Bitcoin wallet address bc1q85zscwjq4ctry3v8wptada5rg5j3xl49xp0c7g
-3. Header: Removed the "Connected" label - now only shows the truncated wallet address when connected
-4. Images: Campaigns reference images from the public folder (cancer.png and flood.png) with fallback placeholders
-5. Story Text: Full campaign stories are included with proper formatting using whitespace-pre-line
