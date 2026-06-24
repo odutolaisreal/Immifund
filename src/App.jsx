@@ -489,7 +489,7 @@ const ImmifundApp = () => {
 
                 <div className="bg-gray-50 rounded-lg p-4">
                   <h4 className="font-semibold text-gray-700 mb-2">
-                    Donation Address
+                 Bitcon (BTC) Donation Address
                   </h4>
                   <div className="flex items-center space-x-2">
                     <code className="text-sm bg-white px-3 py-2 rounded border flex-1 break-all">
