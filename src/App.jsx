@@ -1,6 +1,3 @@
-Here's the complete React component code with the requested changes - the header now shows the wallet address without the "Connected" label, and I've updated the campaigns as requested.
-
-```jsx
 import React, { useState, useEffect } from "react";
 import {
   Heart,
@@ -31,9 +28,6 @@ const ImmifundApp = () => {
   const [donationAmount, setDonationAmount] = useState("");
   const [copied, setCopied] = useState(false);
 
-  // Updated campaigns: "Against Cancer" + "Flood" (replaces education campaign)
-  // All use wallet address: bc1q85zscwjq4ctry3v8wptada5rg5j3xl49xp0c7g
-  // Images from public folder: cancer.png, flood.png
   const mockCampaigns = [
     {
       id: 1,
@@ -43,7 +37,7 @@ const ImmifundApp = () => {
       category: "medical",
       creator: "Family of NATASHA",
       target: 27600,
-      raised: 12450,
+      raised: 8450,
       donors: 87,
       timeLeft: "18 days",
       image: "cancer.png",
@@ -67,16 +61,78 @@ const ImmifundApp = () => {
         "Dear Community,\n\nAfter the flood our lives changed forever. A devastating Flood swept through LOUISIANA, and in a matter of moments, the place we called home was reduced to nothing.\n\nWe lost everything our clothes, our cherished family photos, our security, and the roof over our heads. It is a surreal and devastating feeling to stand in front of where your life used to be and see only rubble.\n\nWhile we are incredibly grateful that our family is safe, the road to rebuilding from scratch is daunting. Insurance and initial relief have helped us take the first few steps, but we are facing a critical gap. We need to raise a final balance of $15,700 to secure permanent housing, replace essential household necessities, and finally establish stability for all family again.\n\nWe are a hardworking family who is used to helping others, and it is incredibly humbling to be the ones asking for help. Any contribution, big or small, will directly help us put the pieces of our lives back together. Thank you for standing with us during our darkest hour.",
       walletAddress: "bc1q85zscwjq4ctry3v8wptada5rg5j3xl49xp0c7g",
     },
+    {
+      id: 3,
+      title: "Maria's Dream: College Tuition for a DACA Recipient",
+      description:
+        "Maria arrived in the US at age 5 and has worked hard to earn a university scholarship — but tuition gaps and ineligibility for federal aid threaten to end her dream before it begins.",
+      category: "education",
+      creator: "Rodriguez Family",
+      target: 18500,
+      raised: 6200,
+      donors: 134,
+      timeLeft: "31 days",
+      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80&auto=format&fit=crop",
+      story:
+        "Dear Supporters,\n\nMy name is Maria. I was brought to the United States from Mexico when I was just 5 years old. This is the only country I have ever truly known. I grew up speaking English, attending American schools, and dreaming the same dreams as every other kid on my block.\n\nThrough years of hard work, I managed to earn a partial academic scholarship to study nursing at a public university. But as a DACA recipient, I am not eligible for federal student aid, and my family — two hardworking parents who clean offices at night — simply cannot cover the remaining $18,500 gap in tuition, housing, and textbooks.\n\nNursing is not just a career choice for me. After watching my grandmother struggle to communicate with doctors who did not speak Spanish, I made a promise to become the bridge that families like mine desperately need. I want to serve immigrant and underserved communities as a bilingual nurse.\n\nThis campaign is my last hope to make that promise a reality. Every dollar you give does not just pay a tuition bill — it invests in the future health of communities that are too often left behind. Thank you for believing in me.",
+      walletAddress: "bc1q85zscwjq4ctry3v8wptada5rg5j3xl49xp0c7g",
+    },
+    {
+      id: 4,
+      title: "Stop the Deportation: Legal Defense for the Okonkwo Family",
+      description:
+        "After 11 years building their lives in the US, the Okonkwo family — including three American-born children — faces deportation. We need $22,000 to fund their immigration attorney and court appeals.",
+      category: "legal",
+      creator: "Friends of the Okonkwo Family",
+      target: 22000,
+      raised: 9750,
+      donors: 211,
+      timeLeft: "14 days",
+      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80&auto=format&fit=crop",
+      story:
+        "Dear Neighbors and Allies,\n\nChukwuemeka and Adaeze Okonkwo have called the United States home since 2013. Over the past 11 years, they have poured everything into building a life here. They own a small cleaning business, pay their taxes, volunteer at their local church, and are raising three children — all born right here in the United States.\n\nThey are our neighbors. Their kids go to school with our kids. They show up at every community fundraiser and neighborhood cleanup. This family is woven into the fabric of where we live.\n\nIn early 2024, their immigration application was denied on a procedural technicality — not on the merits of their case. They now have just weeks before a removal order is enforced. Their three American-born children — ages 4, 7, and 9 — would either be uprooted from the only home they have ever known, or forced to separate from their parents.\n\nAn experienced immigration attorney has reviewed their case and believes there are strong grounds for appeal, including evidence that was never properly entered into the record and updated documentation that could change the outcome entirely. But the legal process is expensive. We need $22,000 to cover attorney fees, filing costs, and emergency court motions.\n\nWe are not asking for charity. We are asking you to help keep a family together. No child should have to choose between their country and their parents. Please give what you can and share their story widely — time is everything.",
+      walletAddress: "bc1q85zscwjq4ctry3v8wptada5rg5j3xl49xp0c7g",
+    },
+    {
+      id: 5,
+      title: "Fresh Start: Afghan Refugee Family's First Home",
+      description:
+        "After fleeing Taliban violence, the Ahmadi family arrived in the US with nothing but the clothes on their backs. Help them furnish a home and cover three months of rent while they find their footing.",
+      category: "emergency",
+      creator: "Local Resettlement Network",
+      target: 12000,
+      raised: 4300,
+      donors: 98,
+      timeLeft: "27 days",
+      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&auto=format&fit=crop",
+      story:
+        "Dear Community,\n\nIn August 2021, Yusuf Ahmadi — a former interpreter who worked alongside U.S. forces for nearly a decade — was forced to flee Afghanistan with his wife Fatima and their two young sons when the Taliban took Kabul. The journey was harrowing: days in hiding, a desperate scramble to the airport, and months in overcrowded transit camps before finally being welcomed to the United States.\n\nYusuf risked his life to serve alongside American soldiers because he believed in a future worth fighting for. Now, that future is here — but it comes with enormous practical challenges. The family arrived with no belongings, no furniture, and no savings. Government resettlement assistance covers only 90 days of basic support, and it is simply not enough.\n\nThey have been placed in a small apartment in a welcoming city, but it sits completely empty. Fatima, who is trained as a teacher, is enrolled in an ESL program and working toward a teaching credential. Yusuf is studying for a commercial driver's license. They are doing everything right — but they need a bridge to get there.\n\nThis campaign will fund three months of rent, basic furniture, a used car for transportation to work and school, and winter clothing for the boys. Every contribution is a vote of confidence that says: your sacrifice was not forgotten, and your family deserves a real chance.",
+      walletAddress: "bc1q85zscwjq4ctry3v8wptada5rg5j3xl49xp0c7g",
+    },
+    {
+      id: 6,
+      title: "Heart Surgery for Abuela Rosa: A Family's Last Hope",
+      description:
+        "Rosa, 71, emigrated from Guatemala 30 years ago and raised four children who are all U.S. citizens. Now she needs urgent open-heart surgery but has no insurance and her family cannot cover the $35,000 cost.",
+      category: "medical",
+      creator: "The Velasquez Family",
+      target: 35000,
+      raised: 11800,
+      donors: 163,
+      timeLeft: "10 days",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop",
+      story:
+        "Dear Generous Strangers,\n\nOur grandmother, Rosa Velasquez, is 71 years old and has spent three decades building a life in this country. She came from Guatemala with almost nothing and worked double shifts as a hotel housekeeper for 25 years to put her four children through school. Every one of them is now a U.S. citizen. Two are nurses. One is a teacher. One runs a small restaurant that employs twelve people.\n\nAbuela Rosa — that is what the whole neighborhood calls her — is the foundation our entire family was built on. Last month, she was diagnosed with severe aortic stenosis and her cardiologist says she needs open-heart surgery within the next few weeks or she will not survive the year.\n\nBecause of her immigration status, she does not qualify for Medicare or Medicaid. She has no health insurance. The surgery costs $35,000, and while our family has managed to raise $11,800 by pooling everything we have, we cannot cover the rest in time.\n\nWe are not ready to lose her. Her grandchildren are not ready to lose her. Please help us give Rosa the chance to meet a few more of them. Any amount you can give brings us one step closer to saving her life. We will be grateful for every single dollar — and for every prayer — for the rest of our lives.",
+      walletAddress: "bc1q85zscwjq4ctry3v8wptada5rg5j3xl49xp0c7g",
+    },
   ];
 
   useEffect(() => {
     setCampaigns(mockCampaigns);
   }, []);
 
-  // Wallet connection simulation
   const connectWallet = async () => {
     try {
-      // Simulate wallet connection with the BTC address
       const mockAddress = "bc1q85zscwjq4ctry3v8wptada5rg5j3xl49xp0c7g";
       setWalletAddress(mockAddress);
       setIsWalletConnected(true);
@@ -115,7 +171,6 @@ const ImmifundApp = () => {
       return;
     }
 
-    // Simulate donation process
     alert(
       `Donation of ${donationAmount} USDC initiated! Transaction will be processed via smart contract.`
     );
@@ -731,14 +786,3 @@ const ImmifundApp = () => {
 };
 
 export default ImmifundApp;
-```
-
-The key changes made:
-
-1. Updated Campaigns: Replaced the educational campaign with two new campaigns:
-   · "Against Cancer: NATASHA's Fight" - Medical campaign with $27,600 goal
-   · "Rebuilding After the Flood: Louisiana" - Housing campaign with $15,700 goal
-2. Wallet Address: All campaigns now use the Bitcoin wallet address bc1q85zscwjq4ctry3v8wptada5rg5j3xl49xp0c7g
-3. Header: Removed the "Connected" label - now only shows the truncated wallet address when connected
-4. Images: Campaigns reference images from the public folder (cancer.png and flood.png) with fallback placeholders
-5. Story Text: Full campaign stories are included with proper formatting using whitespace-pre-line
