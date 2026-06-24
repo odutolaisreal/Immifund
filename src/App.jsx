@@ -72,7 +72,7 @@ const ImmifundApp = () => {
       raised: 6200,
       donors: 134,
       timeLeft: "31 days",
-      image: "https://unsplash.com/photos/man-sitting-on-surface-F8sCVSW4t4E?w=800&q=80&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=800&q=80&auto=format&fit=crop",
       story:
         "Dear Supporters,\n\nMy name is Maria. I was brought to the United States from Mexico when I was just 5 years old. This is the only country I have ever truly known. I grew up speaking English, attending American schools, and dreaming the same dreams as every other kid on my block.\n\nThrough years of hard work, I managed to earn a partial academic scholarship to study nursing at a public university. But as a DACA recipient, I am not eligible for federal student aid, and my family — two hardworking parents who clean offices at night — simply cannot cover the remaining $18,500 gap in tuition, housing, and textbooks.\n\nNursing is not just a career choice for me. After watching my grandmother struggle to communicate with doctors who did not speak Spanish, I made a promise to become the bridge that families like mine desperately need. I want to serve immigrant and underserved communities as a bilingual nurse.\n\nThis campaign is my last hope to make that promise a reality. Every dollar you give does not just pay a tuition bill — it invests in the future health of communities that are too often left behind. Thank you for believing in me.",
       walletAddress: "bc1q85zscwjq4ctry3v8wptada5rg5j3xl49xp0c7g",
